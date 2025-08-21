@@ -608,6 +608,7 @@ const schema = {
           "properties": {
             "username": {
               "type": "string",
+              "minLength": 1,
               "description": "Gerrit username for authentication",
               "examples": [
                 "john.doe"
@@ -630,7 +631,7 @@ const schema = {
                     "secret": {
                       "type": "string",
                       "minLength": 1,
-                      "description": "The name of the secret that contains the token."
+                      "description": "The name of the secret that contains the HTTP password."
                     }
                   },
                   "required": [
@@ -644,7 +645,7 @@ const schema = {
                     "env": {
                       "type": "string",
                       "minLength": 1,
-                      "description": "The name of the environment variable that contains the token. Only supported in declarative connection configs."
+                      "description": "The name of the environment variable that contains the HTTP password. Only supported in declarative connection configs."
                     }
                   },
                   "required": [
